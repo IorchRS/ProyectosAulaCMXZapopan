@@ -1,0 +1,32 @@
+<div class="container color-dark">
+  <div class="col">
+    <p class="titulos"> {{Text }}</p>
+  </div>
+  <div class="col">
+    <p class="titulos">  {{ lista }}{{ itemCount }}</p>
+  </div>
+</div>
+<div class="container color-light">
+  <div class="col">
+    <p class="sm">ingrese lo que desea donar, adelante</p>
+
+    <form>
+      <input type="text" class="txt" name="item" placeholder="Ingresa tu donacion" [(ngModel)]="goalText">
+      <br><span>Para egregar: {{ goalText }}</span><br>
+      
+      <input type="submit" class="btn" value=  {{btnText}} (click)="addItem()">
+      
+    
+
+    </form>
+  </div>
+  <div class="col">
+    <p class="life-container">
+      tu ayuda simpre es la diferencia :D
+    </p>
+    <p class="life-container" *ngFor="let goal of goals">
+      {{ goal }}
+    </p>
+  </div>
+</div>
+ 
